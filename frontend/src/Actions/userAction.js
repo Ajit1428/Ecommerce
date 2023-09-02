@@ -39,14 +39,14 @@ import {
     CLEAR_MESSAGE,
 } from "../Constants/userConstants";
 
-const uri = "https://ecommerce-website-mltf.onrender.com"
+// const uri = "https://ecommerce-website-mltf.onrender.com"
 
 export const login = (email, password) => async (dispatch) => {
     try {
         dispatch({ type: LOGIN_REQUEST });
         const config = { headers: { "Content-Type": "application/json" }, withCredentials: true};
         const { data } = await axios.post(
-            `${uri}/api/v1/user/login`,
+            `/api/v1/user/login`,
             { email, password },
             config
         );
@@ -68,7 +68,7 @@ export const register = (userData) => async (dispatch) => {
         dispatch({ type: REGISTER_USER_REQUEST });
         const config = { header: { "Content-Type": "multipart/form-data" } , withCredentials: true};
         const { data } = await axios.post(
-            `${uri}/api/v1/user/register`,
+            `/api/v1/user/register`,
             userData,
             config
         );
@@ -88,7 +88,7 @@ export const register = (userData) => async (dispatch) => {
 export const loadUser = () => async (dispatch) => {
     try {
         dispatch({ type: LOAD_USER_REQUEST });
-        const { data } = await axios.get(`${uri}/api/v1/user/me`);
+        const { data } = await axios.get(`/api/v1/user/me`);
         dispatch({ type: LOAD_USER_SUCCESS, payload: data.result });
     } catch (error) {
         dispatch({
@@ -100,7 +100,7 @@ export const loadUser = () => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
     try {
-        await axios.get(`${uri}/api/v1/user/logout`);
+        await axios.get(`/api/v1/user/logout`);
         dispatch({ type: LOGOUT_SUCCESS });
     } catch (error) {
         dispatch({
@@ -115,7 +115,7 @@ export const updateProfile = (userData) => async (dispatch) => {
         dispatch({ type: UPDATE_PROFILE_REQUEST });
         const config = { header: { "Content-Type": "multipart/form-data" } };
         const { data } = await axios.patch(
-            `${uri}/api/v1/user/me/update`,
+            `/api/v1/user/me/update`,
             userData,
             config
         );
@@ -133,7 +133,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
         dispatch({ type: UPDATE_PASSWORD_REQUEST });
         const config = { header: { "Content-Type": "application/json" } };
         const { data } = await axios.patch(
-            `${uri}/api/v1/user/password/update`,
+            `/api/v1/user/password/update`,
             passwords,
             config
         );
@@ -151,7 +151,7 @@ export const forgetPassword = (email) => async (dispatch) => {
         dispatch({ type: FORGET_PASSWORD_REQUEST });
         const config = { header: { "Content-Type": "application/json" } };
         const { data } = await axios.post(
-            `${uri}/api/v1/user/password/forget`,
+            `/api/v1/user/password/forget`,
             email,
             config
         );
@@ -169,7 +169,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
         dispatch({ type: RESET_PASSWORD_REQUEST });
         const config = { header: { "Content-Type": "application/json" } };
         const { data } = await axios.post(
-            `${uri}/api/v1/user/password/reset/${token}`,
+            `/api/v1/user/password/reset/${token}`,
             passwords,
             config
         );
@@ -185,7 +185,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
 export const getAllUsers = () => async (dispatch) => {
     try {
         dispatch({ type: ALL_USERS_REQUEST });
-        const { data } = await axios.get(`${uri}/api/v1/user/admin/all/users`);
+        const { data } = await axios.get(`/api/v1/user/admin/all/users`);
 
         dispatch({ type: ALL_USERS_SUCCESS, payload: data.result });
     } catch (error) {
@@ -199,7 +199,7 @@ export const getAllUsers = () => async (dispatch) => {
 export const getUserDetails = (id) => async (dispatch) => {
     try {
       dispatch({ type: USER_DETAILS_REQUEST });
-      const { data } = await axios.get(`${uri}/api/v1/user/admin/all/${id}`);
+      const { data } = await axios.get(`/api/v1/user/admin/all/${id}`);
       console.log(data)
   
       dispatch({ type: USER_DETAILS_SUCCESS, payload: data.result });
@@ -215,7 +215,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
         const config = { headers: { "Content-Type": "application/json" } };
 
         const { data } = await axios.patch(
-            `${uri}/api/v1/user/admin/role/${id}`,
+            `/api/v1/user/admin/role/${id}`,
             userData,
             config
         );
@@ -235,7 +235,7 @@ export const deleteUser = (id) => async (dispatch) => {
         dispatch({ type: DELETE_USER_REQUEST });
         console.log(id)
 
-        const { data } = await axios.delete(`${uri}/api/v1/user/admin/all/${id}`);
+        const { data } = await axios.delete(`/api/v1/user/admin/all/${id}`);
 
         dispatch({ type: DELETE_USER_SUCCESS, payload: data });
     } catch (error) {

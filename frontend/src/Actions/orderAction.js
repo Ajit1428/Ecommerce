@@ -21,7 +21,7 @@ import {
 } from "../Constants/orderConstants";
 import axios from "axios";
 
-const uri = "https://project-ecommerce-backend.onrender.com"
+const uri = "https://ecommerce-website-mltf.onrender.com"
 
 export const createOrder = (order) => async (dispatch) => {
     try {

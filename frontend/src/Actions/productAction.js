@@ -30,7 +30,7 @@ import {
     CLEAR_ERRORS,
 } from "../Constants/productConstants";
 
-const uri = "https://project-ecommerce-backend.onrender.com"
+const uri = "https://ecommerce-website-mltf.onrender.com"
 
 export const getProduct =
     (

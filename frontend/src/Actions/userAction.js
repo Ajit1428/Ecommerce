@@ -39,7 +39,7 @@ import {
     CLEAR_MESSAGE,
 } from "../Constants/userConstants";
 
-const uri = "https://project-ecommerce-backend.onrender.com"
+const uri = "https://ecommerce-website-mltf.onrender.com"
 
 export const login = (email, password) => async (dispatch) => {
     try {

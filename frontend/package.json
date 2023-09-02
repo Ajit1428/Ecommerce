@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy" : "http://localhost:2800",
   "dependencies": {
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.3",

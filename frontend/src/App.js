@@ -44,16 +44,18 @@ const App = () => {
     const { isAuthenticated } = useSelector((state) => state.user);
     const [stripeApiKey, setStripeApiKey] = useState("");
     const dispatch = useDispatch();
-    const uri = "https://project-ecommerce-backend.onrender.com"
+    // const uri = "https://project-ecommerce-backend.onrender.com"
 
     const getStripeApiKey = async () => {
-        const { data } = await axios.get(`${uri}/api/v1/payment/stripeapikey`);
+        const { data } = await axios.get(`/api/v1/payment/stripeapikey`);
+    }
         setStripeApiKey(data.stripeApiKey);
     };
 
     useEffect(() => {
-        getStripeApiKey();
         store.dispatch(loadUser());
+        getStripeApiKey();
+        dataGetter()
     }, []);
 
     // window.addEventListener("contextmenu", (e) => e.preventDefault());
@@ -149,7 +151,7 @@ const App = () => {
                                 </ProtectedRoute>
                             }
                         />
-                        <Route
+                        {/* <Route
                             exact
                             path="/process/payment"
                             element={
@@ -161,7 +163,7 @@ const App = () => {
                                     </Elements>
                                 )
                             }
-                        />
+                        /> */}
                         <Route
                             exact
                             path="/success"

@@ -37,10 +37,7 @@ app.use(fileUpload())
 MongoDb()
 
 /* Cors */
-app.use("*" ,cors({
-    origin: true,
-    credentials: true
-}))
+app.use(cors())
 
 /* Routing */
 app.use("/api/v1", routing)

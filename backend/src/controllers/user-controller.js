@@ -39,8 +39,7 @@ class UserController {
                 /* Cookie to store the token */         
                 res.cookie("token", token, {
                     expires: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000),
-                    sameSite: "none",
-                    secure: true
+                    httpsOnly: true
                 }).json({
                     accessToken: token,
                     result: response,
@@ -71,8 +70,7 @@ class UserController {
                 /* Cookie to store the token */
                 res.cookie("token", token, {
                     expires: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000),
-                    sameSite: "none",
-                    secure: true
+                    httpsOnly: true
                 }).json({
                     result: {
                         accessToken: token,
@@ -99,8 +97,7 @@ class UserController {
             /* Setting cookies to null for logout functionality */
             res.cookie("token", null, {
                 expires: new Date(Date.now()),
-                sameSite: "none",
-                secure: true
+                httpsOnly: true
             }).json({
                 msg: "Logged out successfully",
                 status: true,

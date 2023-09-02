@@ -88,6 +88,7 @@ class UserController {
                 });
             }
         } catch (error) {
+            console.log(error)
             next({ status: 401, msg: `Invalid email or password` });
         }
     };

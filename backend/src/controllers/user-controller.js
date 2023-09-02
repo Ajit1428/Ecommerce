@@ -49,7 +49,6 @@ class UserController {
                 });
             }
         } catch (error) {
-            console.log(`Registration Error: ${error}`);
             next({ status: 400, msg: `Registration Error: ${error.message}` });
         }
     };
@@ -88,7 +87,6 @@ class UserController {
                 });
             }
         } catch (error) {
-            console.log(error)
             next({ status: 401, msg: `Invalid email or password` });
         }
     };
@@ -105,7 +103,6 @@ class UserController {
                 meta: null,
             });
         } catch (error) {
-            console.log(`Logout Error: ${error.message}`);
             next({ status: 401, msg: `Logout Error: ${error.message}` });
         }
     };
@@ -166,7 +163,6 @@ class UserController {
                     req.body.password,
                     resetUser.password
                 );
-                console.log(decryptedPass.valueOf)
                 if(decryptedPass)
                 {
                     next({status: 401, msg: "Please use different password, cannot set the previous set password"})

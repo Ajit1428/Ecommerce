@@ -21,8 +21,6 @@ import {
 } from "../Constants/orderConstants";
 import axios from "axios";
 
-// const uri = "https://ecommerce-website-mltf.onrender.com"
-
 export const createOrder = (order) => async (dispatch) => {
     try {
         dispatch({ type: CREATE_ORDER_REQUEST });
@@ -35,7 +33,6 @@ export const createOrder = (order) => async (dispatch) => {
         const { data } = await axios.post(`/api/v1/orders/new`, order, config);
         dispatch({ type: CREATE_ORDER_SUCCESS, payload: data.result });
     } catch (error) {
-        console.log(error);
         dispatch({
             type: CREATE_ORDER_FAIL,
             payload: error.response,

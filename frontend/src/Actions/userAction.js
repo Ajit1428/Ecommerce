@@ -39,8 +39,6 @@ import {
     CLEAR_MESSAGE,
 } from "../Constants/userConstants";
 
-// const uri = "https://ecommerce-website-mltf.onrender.com"
-
 export const login = (email, password) => async (dispatch) => {
     try {
         dispatch({ type: LOGIN_REQUEST });

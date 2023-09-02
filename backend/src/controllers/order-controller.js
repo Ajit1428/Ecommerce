@@ -127,7 +127,6 @@ class OrderController {
                 });
             }
         } catch (error) {
-            console.log(error);
             next({ status: 401, msg: "Cannot update the order" });
         }
     };

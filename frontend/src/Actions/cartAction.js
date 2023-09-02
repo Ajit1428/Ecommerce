@@ -1,7 +1,6 @@
 import { ADD_TO_CART, REMOVE_CART_ITEM, SAVE_SHIPPING_INFO } from "../Constants/cartConstants";
 import axios from "axios";
 
-// const uri = "https://ecommerce-website-mltf.onrender.com"
 
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
     const { data } = await axios.get(`/api/v1/products/lists/${id}`);

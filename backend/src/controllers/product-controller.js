@@ -40,7 +40,6 @@ class ProductController {
                 meta: null,
             });
         } catch (error) {
-            console.log(`Product Create: ${error.message}`);
             next({
                 status: 400,
                 msg: `Unable to create the product: ${error.message}`,
@@ -109,7 +108,6 @@ class ProductController {
                 meta: null,
             });
         } catch (error) {
-            console.log(`Fetching product by id: ${error.message}`);
             next({
                 status: 400,
                 msg: `Unable to fetch the product by id: ${error.message}`,
@@ -187,7 +185,6 @@ class ProductController {
                 });
             }
         } catch (error) {
-            console.log(`Delete Product: ${error.message}`);
             next({
                 status: 400,
                 msg: `Unable to delete the product: ${error.message}`,
@@ -239,7 +236,6 @@ class ProductController {
                 msg: "Reviews",
             });
         } catch (error) {
-            console.log(error);
             next({
                 status: 401,
                 msg: "Cannot create or update the review for the product",
@@ -294,7 +290,6 @@ class ProductController {
                 status: true,
             });
         } catch (error) {
-            console.log(error);
             next({ status: 401, msg: "Cannot delete the reviews" });
         }
     };

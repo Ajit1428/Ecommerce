@@ -1,0 +1,180 @@
+.containerProfile{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 10vmax;
+    overflow: hidden;
+}
+
+.first__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmax;
+    width: 40rem;
+    height: 100%;
+    margin-bottom: 3vmax;
+}
+
+.first__container > h1{
+    font: 500 3vmax var(--poppins-font);
+    color: var(--text-color);
+}
+
+.first__container > img{
+    width: 20vmax;
+    height: 20vmax;
+    border-radius: 100%;
+    transition: all 0.5s;
+}
+
+.first__container > img:hover{
+    transform: scale(1.05);
+}
+
+.first__container > a{
+    background-color: var(--tomato-color);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font: 300 1vmax var(--poppins-font);
+    border: none;
+    width: 20vmax;
+    padding: 1vmax;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.first__container > a:hover{
+    background-color: var(--aqua-color);
+    color: var(--bg-color);
+}
+
+.second__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--aqua-color);
+    box-shadow: 5px 5px 20px var(--aqua-color);
+    border-radius: 20px;
+    width: 30rem;
+    padding: 4vmax;
+    margin: 0 3vmax 2vmax 5vmax;
+}
+
+.second__container__details{
+    display: flex;
+    flex-direction: column;
+    gap: 3vmax;
+}
+
+.second__container__details > div > h4{
+    border-bottom: 2px solid var(--aqua-color);
+    border-radius: 5px;
+    width: fit-content;
+    font: 400 1.2vmax var(--poppins-font);
+    color: var(--text-color);
+    padding-bottom: .1vmax;
+    margin-bottom: .5vmax;
+}
+.second__container__details > div > p{
+    font: 200 1vmax cursive;
+    color: var(--text-color);
+}
+
+.button__div{
+    display: flex;
+    flex-direction: column;
+    gap: 2vmax;
+}
+
+.button__div > a {
+    background-color: var(--tomato-color);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font: 300 1vmax var(--poppins-font);
+    border: none;
+    width: 20vmax;
+    padding: 1vmax;
+    transition: all 0.5s;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 20vmax;
+}
+
+.button__div > a:hover{
+    background-color: var(--aqua-color);
+    color: var(--bg-color);
+}
+
+@media screen and (max-width: 600px) {
+    .containerProfile{
+        flex-direction: column;
+        height: auto;
+        gap: 0;
+    }
+    
+    .first__container{
+        gap: 3vmax;
+        width: 100vw;
+        height: 100vh;
+        margin-bottom: 10vmax;
+    }
+    
+    .first__container > h1{
+        font-size: 5vmax;
+    }
+    
+    .first__container > img{
+        width: 40vmax;
+        height: 40vmax;
+    }
+    
+    .first__container > a{
+        font: 400 2vmax var(--poppins-font);
+        width: 40vmax;
+        padding: 3vmax;
+    }
+      
+    .second__container{
+        width: 90%;
+        height: auto;
+        padding: 2vmax;
+        margin: 0 0 10vmax 0;
+    }
+    
+    .second__container__details{
+        display: flex;
+        flex-direction: column;
+        gap: 8vmax;
+        width: 100%;
+        margin-left: 1vmax;
+    }
+    
+    .second__container__details > div > h4{
+        font-size: 3vmax;
+        margin-bottom: 2vmax;
+    }
+    .second__container__details > div > p{
+        font-size: 2vmax;
+    }
+    
+    .button__div{
+        gap: 4vmax;
+        margin-bottom: 2vmax;
+    }
+    
+    .button__div > a {
+        font-size: 2vmax;
+        padding: 2vmax;
+        width: auto;
+    }
+    
+    .button__div > a:hover{
+        background-color: var(--aqua-color);
+        color: var(--bg-color);
+    }
+}

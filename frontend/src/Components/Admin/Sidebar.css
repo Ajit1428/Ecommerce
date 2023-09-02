@@ -1,0 +1,30 @@
+.sidebar {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+    margin: 2vmax 0 2vmax 1vmax;
+    background-color: #112e42;
+  }
+  
+
+  .sidebar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font: 200 1rem var(--poppins-font);
+    padding: 2rem;
+    transition: all 0.5s;
+  }
+  .sidebar a:hover {
+    color: tomato;
+    transform: scale(1.1);
+  }
+  
+  .sidebar a > P {
+    display: flex;
+    align-items: center;
+  }
+  .sidebar a > p > svg {
+    margin-right: 0.5rem;
+  }
+  

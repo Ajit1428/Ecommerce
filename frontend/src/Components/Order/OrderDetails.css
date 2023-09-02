@@ -1,0 +1,118 @@
+.orderDetailsPage {
+    background-color: var(---bg-color);
+    border: 1px solid var(--aqua-color);
+    box-shadow: 5px 5px 20px var(--aqua-color);
+    height: auto;
+    margin: 2vmax;
+  }
+  
+  .orderDetailsContainer > h1 {
+    font: 300 2vmax var(--poppins-font);
+    margin: 1vmax 0;
+    color: aqua;
+    padding-bottom: 2vmax;
+  }
+  
+  .orderDetailsContainer {
+    padding: 5vmax;
+    padding-bottom: 0%;
+  }
+  
+  .orderDetailsContainer > p {
+    font: 400 1.5vmax var(--poppins-font);
+    color:  var(--text-color);
+  }
+  
+  .orderDetailsContainerBox,
+  .orderDetailsCartItemsContainer {
+    margin: 2vmax;
+  }
+  
+  .orderDetailsContainerBox > div {
+    display: flex;
+    margin: 1vmax 0;
+  }
+  
+  .orderDetailsContainerBox > div > p {
+    font: 400 1vmax var(--poppins-font);
+    color: var(--text-color);
+  }
+  .orderDetailsContainerBox > div > span {
+    margin: 0 1vmax;
+    font: 100 1vmax var(--poppins-font);
+    color: var(--text-color);
+  }
+  
+  .orderDetailsCartItems > p {
+    font: 400 1.5vmax var(--poppins-font);
+    color: var(--text-color);
+  }
+  
+  .orderDetailsCartItems {
+    padding: 2vmax 5vmax;
+    border-top: 1px solid aqua;
+  }
+  
+  .orderDetailsCartItemsContainer > div {
+    display: flex;
+    font: 400 1vmax var(--poppins-font);
+    align-items: center;
+    margin: 2vmax 0;
+  }
+  
+  .orderDetailsCartItemsContainer > div > img {
+    width: 3vmax;
+    height: 3vmax;
+  }
+  
+  .orderDetailsCartItemsContainer > div > a {
+    color: var(--text-color);
+    margin: 0 2vmax;
+    width: 60%;
+    text-decoration: none;
+  }
+
+  
+  .orderDetailsCartItemsContainer > div > span {
+    font: 100 1vmax var(--poppins-font);
+    color: var(--text-color);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .orderDetailsContainer > p {
+      font: 400 6vw var(--poppins-font);
+    }
+  
+    .orderDetailsContainerBox > div {
+      margin: 6vw 0;
+    }
+  
+    .orderDetailsContainerBox > div > p {
+      font: 400 4vw var(--poppins-font);
+    }
+    .orderDetailsContainerBox > div > span {
+      font: 100 4vw var(--poppins-font);
+    }
+  
+    .orderDetailsCartItems > p {
+      font: 400 6vw var(--poppins-font);
+    }
+  
+    .orderDetailsCartItemsContainer > div {
+      font: 400 4vw var(--poppins-font);
+      margin: 4vw 0;
+    }
+  
+    .orderDetailsCartItemsContainer > div > img {
+      width: 10vw;
+    }
+  
+    .orderDetailsCartItemsContainer > div > a {
+      margin: 2vw;
+      width: 30%;
+    }
+  
+    .orderDetailsCartItemsContainer > div > span {
+      font: 100 4vw var(--poppins-font);
+    }
+  }

@@ -1,0 +1,60 @@
+.searchBox {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchBox input{
+    display: flex;
+    width: 50vmax;
+    height: 4vmax;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    border: 2px solid var(--aqua-color);
+    box-shadow: 5px 5px 20px var(--aqua-color);
+    padding: 0 2vmax;
+    font: 500 1vmax var(--poppins-font);
+    outline: none;
+    border-top-left-radius: 1.5rem;
+}
+
+.submitButton {
+    position: relative;
+    display: flex;
+    width: 10vmax;
+    height: 4vmax;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--aqua-color);
+    box-shadow: 5px 5px 20px var(--aqua-color);
+    justify-content: center;
+    align-items: center;
+    font: 300 1vmax var(--poppins-font);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 1;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.submitButton::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--aqua-color);
+    z-index: -1;
+    transition: all 0.5s;
+}
+.submitButton:hover {
+    color: var(--second-bg-color);
+    font: 400 1vmax var(--poppins-font);
+}
+
+.submitButton:hover::before {
+    width: 100%;
+}

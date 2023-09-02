@@ -1,0 +1,50 @@
+.orderSuccess {
+    margin: auto;
+    text-align: center;
+    padding: 10vmax;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.orderSuccess > svg {
+    font-size: 7vmax;
+    color: lime;
+}
+.orderSuccess > p {
+    color: var(--text-color);
+    font: 400 2vmax var(--poppins-font);
+}
+.orderSuccess > a {
+    background-color: var(--tomato-color);
+    color: var(--text-color);
+    border: none;
+    padding: 1vmax 3vmax;
+    cursor: pointer;
+    font: 400 1vmax var(--poppins-font);
+    text-decoration: none;
+    margin: 2vmax;
+    transition: all 0.5s;
+}
+
+.orderSuccess > a:hover{
+    background-color: var(--aqua-color);
+    color: var(--bg-color);
+}
+
+@media screen and (max-width: 600px) {
+    .orderSuccess > a {
+        padding: 3vw 6vw;
+        font: 400 4vw "Roboto";
+        margin: 2vmax;
+    }
+
+    .orderSuccess > svg {
+        font-size: 20vw;
+    }
+    .orderSuccess > p {
+        margin: 2vmax;
+        font-size: 5vw;
+    }
+}

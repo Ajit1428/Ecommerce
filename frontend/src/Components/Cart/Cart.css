@@ -1,0 +1,215 @@
+.emptyCart {
+    height: auto;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8vmax;
+    margin: 10vmax 0;
+}
+.emptyCart > svg {
+    font-size: 10vmax;
+    color: var(--tomato-color);
+}
+.emptyCart > p {
+    font: 500 2.5vmax var(--poppins-font);
+}
+.emptyCart > a {
+    position: relative;
+    padding: 1.5vmax;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+    border: 2px solid var(--aqua-color);
+    box-shadow: 5px 5px 20px var(--aqua-color);
+    cursor: pointer;
+    color: var(--text-color);
+    font: 500 1.1vmax var(--poppins-font);
+    transition: all 0.5s;
+    text-decoration: none;
+    width: 15vmax;
+}
+
+.emptyCart > a:hover {
+    color: var(--bg-color);
+    background-color: var(--aqua-color);
+}
+
+.cartPage {
+    height: auto;
+    padding: 5vmax;
+}
+
+.cartHeader {
+    width: 90%;
+    margin: auto;
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    border: 1px solid var(--aqua-color);
+    box-shadow: 2px 2px 5px var(--aqua-color);
+}
+
+.cartHeader > p {
+    margin: 10px;
+    font: 500 1vmax var(--poppins-font);
+}
+
+.cartHeader > p:last-child {
+    text-align: end;
+}
+
+.cartContainer {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    margin-top: 2vmax;
+}
+
+.cartInput {
+    display: flex;
+    align-items: center;
+    height: 8vmax;
+}
+
+.cartInput > button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.616);
+    padding: 0.5vmax;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+}
+
+.cartInput > button:hover {
+    background-color: var(--aqua-color);
+    color: var(--second-bg-color);
+    font-size: 1vmax;
+}
+
+.cartInput > input {
+    border: none;
+    padding: 0.5vmax;
+    width: 2vmax;
+    text-align: center;
+    outline: none;
+    font: 400 0.8vmax var(--poppins-font);
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+.cartSubtotal {
+    display: flex;
+    padding: 0.5vmax;
+    height: 8vmax;
+    align-items: center;
+    font: 300 1vmax cursive;
+    justify-content: flex-end;
+    color: var(--text-color);
+}
+
+.cartGrossProfit {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr;
+}
+
+.cartGrossProfitBox {
+    border-top: 3px solid tomato;
+    margin: 1vmax 4.2vmax;
+    padding: 2vmax .8vmax;
+    font: 300 1vmax var(--poppins-font);
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartGrossProfitBox > p {
+    color: var(--text-color);
+}
+
+.checkOutBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+.checkOutBtn > button {
+    background-color: tomato;
+    color: var(--text-color);
+    border: none;
+    padding: 0.8vmax 4vmax;
+    width: 70%;
+    font: 300 1vmax var(--poppins-font);
+    margin: 1vmax 4vmax;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+
+.checkOutBtn > button:hover {
+    background-color: var(--aqua-color);
+    color: var(--second-bg-color);
+}
+
+@media screen and (max-width: 600px) {
+    .cartPage {
+        padding: 2vmax;
+    }
+
+    .cartHeader {
+        width: 100%;
+        height: 6vmax;
+        grid-template-columns: 2.5fr 1fr 1fr;
+    }
+
+    .cartHeader > p {
+        font-size: 1.5vmax;
+    }
+
+    .cartContainer {
+        width: 100%;
+        grid-template-columns: 2.5fr 1fr 1fr;
+        margin-top: 2vmax;
+    }
+
+    .cartInput {
+        height: 20vmax;
+    }
+
+    .cartInput > button {
+        padding: 1vmax;
+    }
+
+    .cartInput > input {
+        padding: 1.5vmax;
+        width: 4vmax;
+        font-size: 1vmax;
+    }
+
+    .cartSubtotal {
+        height: 20vmax;
+        padding-right:  1vmax;
+        font-size: 1.5vmax;
+    }
+
+    .cartGrossProfit {
+      margin-top: 5vmax;
+      grid-template-columns: 0fr 2fr;
+  }
+  
+  .cartGrossProfitBox {
+      border-top: 3px solid tomato;
+      margin: 2vmax 1.8vmax;
+      padding: 5vmax 0;
+      font-size: 2vmax;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+
+  .checkOutBtn > button {
+      padding: 2vmax 1vmax;
+      width: 100%;
+      font: 500 2vmax var(--poppins-font);
+      margin: 2vmax 3vmax;
+  }
+}

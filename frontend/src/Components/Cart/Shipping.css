@@ -1,0 +1,124 @@
+.shippingContainer {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shippingBox {
+    border: 1px solid var(--aqua-color);
+    box-shadow: 5px 5px 20px var(--aqua-color);
+    background-color: transparent;
+    width: 25vw;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 2vmax;
+}
+
+.shippingHeading {
+    text-align: center;
+    color: var(--text-color);
+    font: 400 1.2vmax var(--poppins-font);
+    border-bottom: 3px solid var(--aqua-color);
+    border-radius: 7px;
+    width: fit-content;
+    margin: 1.7vmax auto;
+}
+
+.shippingForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    gap: 1.5vmax;
+    height: 80%;
+    transition: all 0.5s;
+}
+
+.shippingForm > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.shippingForm > div > input,
+.shippingForm > div > select {
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    border: 1px solid var(--aqua-color);
+    border-radius: 4px;
+    font: 300 0.9vmax cursive;
+    color: var(--text-color);
+    outline: none;
+}
+
+.shippingForm > div > svg {
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 1.6vmax;
+    color: var(--text-color);
+}
+
+.shippingBtn {
+    border: none;
+    background-color: var(--tomato-color);
+    color: var(--text-color);
+    font: 500 1vmax var(--poppins-font);
+    width: 100%;
+    padding: 1vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 2vmax;
+}
+
+.shippingBtn:hover {
+    background-color: var(--aqua-color);
+    color: var(--bg-color);
+}
+
+@media screen and (max-width: 600px) {
+    .shippingContainer {
+        height: auto;
+    }
+    .shippingBox {
+        width: 80vw;
+        margin: 10vmax 0;
+    }
+
+    .shippingHeading {
+        font: 400 2.3vmax var(--poppins-font);
+        padding: 3vmax;
+    }
+
+    .shippingForm {
+        padding: 4vmax;
+        gap: 4vmax;
+    }
+
+    .shippingForm > div > input,
+    .shippingForm > div > select {
+        padding: 3vmax 10vw;
+        font: 300 2vmax cursive;
+    }
+
+    .shippingForm > div > svg {
+        font-size: 3vmax;
+        transform: translateX(3vw);
+    }
+
+    .shippingBtn {
+        font: 300 2.5vmax var(--poppins-font);
+        padding: 2.5vmax;
+    }
+}

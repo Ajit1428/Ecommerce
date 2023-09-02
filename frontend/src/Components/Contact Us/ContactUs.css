@@ -1,0 +1,23 @@
+.mail__contact{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail__contact > h1 > a{
+    cursor: crosshair;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.mail__contact > h1{
+    cursor: crosshair;
+    color: var(--text-color);
+}
+
+.mail__contact > h1 > a:hover{
+    color: var(--aqua-color);
+}

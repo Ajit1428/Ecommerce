@@ -1,0 +1,118 @@
+.productCart {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 15vmax;
+    height: auto;
+    margin: 4vmax 2vmax 8vmax 2vmax;
+    gap: 1.2vmax;
+    transition: all 0.5s;
+    padding: 2vmax;
+}
+
+.productCart > img {
+    width: 14vmax;
+    height: 14vmax;
+    margin-bottom: 1vmax;
+}
+
+.productCart > p {
+    font: 300 1.4vmax var(--poppins-font);
+}
+
+.ratings {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15vmax;
+    gap: 3vmax;
+}
+.ratings_span {
+    font: 300 0.7vmax var(--poppins-font);
+}
+.productCart > span {
+    color: gold;
+    font-size: 1vmax;
+}
+
+.productCart:hover {
+    transform: translateY(-1rem);
+}
+
+@media screen and (max-width: 1024px) {
+    .productCart {
+        width: 25vmax;
+        margin: 8vmax 10vmax 0 5vmax;
+        gap: 2vmax;
+    }
+    .productCart > img {
+        width: 25vmax;
+        height: 25vmax;
+    }
+    .productCart > p {
+        font-size: 1.8vmax;
+    }
+    .ratings {
+        width: 25vmax;
+    }
+    .ratings_span {
+        font-size: 1.2vmax;
+    }
+    .productCart > span {
+        font-size: 1.5vmax;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .productCart {
+        width: 40vmax;
+        margin: 5vmax 10vmax 5vmax 5vmax;
+        gap: 4vmax;
+    }
+    .productCart > img {
+        width: 40vmax;
+        height: 40vmax;
+    }
+    .productCart > p {
+        font-size: 2.8vmax;
+    }
+    .ratings {
+        width: 40vmax;
+        gap: 4vmax;
+    }
+
+    .ratings_span {
+        font-size: 2vmax;
+    }
+    .productCart > span {
+        font-size: 2.5vmax;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .productCart {
+        width: 35vmax;
+        margin: 10vmax 10vmax 0 5vmax;
+        gap: 5vmax;
+    }
+    .productCart > img {
+        width: 35vmax;
+        height: 35vmax;
+    }
+    .productCart > p {
+        font-size: 2.5vmax;
+    }
+    .ratings {
+        width: 35vmax;
+        gap: 2vmax;
+    }
+
+    .ratings_span {
+        font-size: 1.5vmax;
+    }
+    .productCart > span {
+        font-size: 2vmax;
+    }
+}
+

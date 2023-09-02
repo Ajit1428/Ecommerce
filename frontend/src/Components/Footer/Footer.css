@@ -1,0 +1,144 @@
+.main__footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #112e42;
+    z-index: 2;
+    color: white;
+    width: 100%;
+    height: 16rem;
+    gap: 2rem;
+    padding: 0 7rem;
+    overflow: hidden;
+}
+
+.div__style {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.div__style p {
+    font-size: 1rem;
+}
+
+.margin {
+    margin-bottom: 1rem;
+}
+
+.hover:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.ul__style {
+    list-style: none;
+    color: white;
+}
+
+.ul__style a {
+    color: white;
+    text-decoration: none;
+}
+
+.ul__style li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.ul__style li a:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 0.6rem;
+    text-align: start;
+    margin-right: 0.4rem;
+}
+
+.find__icons {
+    width: auto;
+    font-size: 0.8rem;
+    padding-right: .3rem;
+    text-align: start;
+}
+
+.div__style__social {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background-color: #112e42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: .5rem;
+}
+
+.ul__style__social {
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
+
+.ul__style__social li{
+   padding: 1rem .1rem;
+}
+
+.social__logo{
+    border: .4rem solid #112e42;
+    border-radius: 3rem;
+    background: #112e42; 
+    width: 2.8rem;
+}
+
+.social__logo:hover{
+    border-color: tomato;
+    background: tomato;
+    cursor: pointer;
+}
+
+.end__p{
+    font-size: .8rem;
+}
+
+@media screen and (max-width:1350px) {
+    .ul__style li{
+        font-size: .87rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main__footer{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        z-index: 2;
+        color: white;
+        width: 100%;
+        height: 35rem;
+        gap: 2rem;
+        padding: 2rem;
+        overflow: hidden;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main__footer{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        z-index: 2;
+        color: white;
+        width: 100%;
+        height: 62rem;
+        gap: 2rem;
+        padding: 2rem;
+        overflow: hidden;
+    }
+}

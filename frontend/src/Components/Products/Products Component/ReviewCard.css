@@ -1,0 +1,25 @@
+.reviewCard{
+    flex: none;
+    border: 1px solid #00abf0;
+    box-shadow: 5px 5px 20px #00abf0;
+    width: 30vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vmax;
+    gap: 1vmax;
+    color: white;
+    margin: 1vmax;
+}
+.reviewCard img{
+    width: 5vmax;
+    height: 5vmax;
+    border-radius: 100%;
+}
+.reviewCard p{
+    font: 400 1.2vmax "Poppins", Sans-serif;
+}
+
+.reviewCard span{
+    font: 300 1vmax "Poppins", Sans-serif;
+}
